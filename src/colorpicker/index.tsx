@@ -1,6 +1,4 @@
-import React from "react";
-
-export default function colorPicker(): SVGElement {  
+export default function colorPicker(): JSX.Element {  
   return (
     <svg
       style={{ width: "100%", height: "100%", position: "absolute" }}

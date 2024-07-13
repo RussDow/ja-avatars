@@ -1,6 +1,4 @@
-import React from "react";
-
-export default function eyesSmile(): SVGElement {
+export default function eyesSmile(): JSX.Element {
   return (
     <svg
       style={{

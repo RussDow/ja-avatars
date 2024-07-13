@@ -1,6 +1,4 @@
-import React from "react";
-
-export default function eyebrowDown(): SVGElement {
+export default function eyebrowDown(): JSX.Element {
   return (
     <svg 
       style={{

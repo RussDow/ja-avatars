@@ -1,6 +1,4 @@
-import React from "react";
-
-export default function glassesRound(): SVGElement {
+export default function glassesRound(): JSX.Element {
   return (
     <svg
       style={{

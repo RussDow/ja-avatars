@@ -1,11 +1,10 @@
-import React from "react";
 import chroma from "chroma-js";
 
 import Hoody from "./hoody";
 import Short from "./short";
 import Polo from "./polo";
 
-export default function shirt (props: { color: string, style: string }): SVGElement {
+export default function shirt (props: { color: string, style: string }): JSX.Element {
   const { style, color } = props;
   const secondColor = chroma(color).brighten(1).hex();
   switch (style) {

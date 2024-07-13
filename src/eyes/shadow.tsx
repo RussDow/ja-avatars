@@ -1,6 +1,4 @@
-import React from "react";
-
-  export default function eyesShadow(): SVGElement {
+  export default function eyesShadow(): JSX.Element {
     return (
       <svg
         style={{

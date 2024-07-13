@@ -1,6 +1,4 @@
-import React from "react";
-
-export default function noseRound(): SVGElement {
+export default function noseRound(): JSX.Element {
   return (
     <svg
       style={{

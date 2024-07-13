@@ -1,5 +1,3 @@
-import React from "react";
-
 import Normal from "./normal";
 import Thick from "./thick";
 import Mohawk from "./mohawk";
@@ -7,7 +5,7 @@ import WomanLong from "./womanLong";
 import WomanShort from "./womanShort";
 import ThreeStrands from "./threeStrands";
 
-export default function hair(props: { style: string, color: string, colorRandom: boolean }): SVGElement {
+export default function hair(props: { style: string, color: string, colorRandom: boolean }): JSX.Element {
   const { style, color, colorRandom } = props;
   switch (style) {
     case "thick": return <Thick color={color} colorRandom={colorRandom} />;

@@ -1,5 +1,3 @@
-import React from "react";
-
 import Laugh from "./laugh";
 import Smile from "./smile";
 import Peace from "./peace";
@@ -9,7 +7,7 @@ import Nervous from "./nervous";
 import Pucker from "./pucker";
 import Sad from "./sad"
 
-export default function mouth (props: { style: string }): SVGElement {
+export default function mouth (props: { style: string }): JSX.Element {
   const { style } = props;
   switch (style) {
     case "laugh": return <Laugh />;

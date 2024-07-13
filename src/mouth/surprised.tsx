@@ -1,6 +1,4 @@
-import React from "react";
-
-export default function mouthSurprised(): SVGElement {
+export default function mouthSurprised(): JSX.Element {
   const id = `mouth-surprised-id`;
   return (
     <svg 

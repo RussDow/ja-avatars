@@ -1,5 +1,3 @@
-import React from 'react'
-
 import './index.scss'
 
 export default function sectionWrapper(props: {
@@ -7,7 +5,7 @@ export default function sectionWrapper(props: {
   children: JSX.Element,
   switchConfig: () => void,
   tip: string
-}): HTMLElement {
+}): JSX.Element {
   const { className = "", children, switchConfig, tip } = props
   return (
     <div className='flex flex-col justify-center items-center text-black font-bold gap-1'>

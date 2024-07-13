@@ -1,6 +1,4 @@
-import React from "react";
-
-export default function eyebrowDownWoman(): SVGElement {
+export default function eyebrowDownWoman(): JSX.Element {
   return (
     <svg 
       style={{

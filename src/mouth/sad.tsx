@@ -1,6 +1,4 @@
-import React from "react";
-
-export default function mouthSad(): SVGElement {
+export default function mouthSad(): JSX.Element {
   return (
     <svg
       style={{
