@@ -3,7 +3,7 @@ import chroma from "chroma-js";
 export default function hairMohawk(props: { color: string, colorRandom: boolean }): JSX.Element {
   const { color, colorRandom } = props;
   const mainColor = colorRandom && color || "#171921";
-  const subColor = colorRandom && chroma(color).brighten(2) || "#717376";
+  const subColor = (colorRandom && chroma(color).brighten(2) || "#717376") as string;
   return (
     <svg
       style={{
