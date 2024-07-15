@@ -1,4 +1,4 @@
-import { useState, useCallback, ChangeEvent } from "react";
+import { useState, useCallback } from "react";
 import domtoimage from "dom-to-image";
 import { saveAs } from "file-saver";
 import ReactNiceAvatar from "./index";
@@ -12,8 +12,7 @@ const App = () => {
     config: genConfig({
       isGradient: Boolean(Math.round(Math.random())),
     }),
-    shape: "circle" as NiceAvatarProps["shape"],
-    name: "",
+    shape: "circle" as NiceAvatarProps["shape"]
   });
 
   const avatarId = "myAvatar";
@@ -38,15 +37,7 @@ const App = () => {
     }));
   }, []);
 
-  const onInputChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
-    setState((prevState) => ({ ...prevState, name: e.target.value }));
-  }, []);
-
-  const download = useCallback(async () => {
-    if (state.name === "") {
-      alert("Enter your name to save your avatar!");
-      return;
-    }
+  const download = useCallback(async () => {    
     const scale = 2;
     const node = document.getElementById(avatarId);
     if (node) {
@@ -61,10 +52,10 @@ const App = () => {
         width: node.offsetWidth * scale,
       });
 
-      saveAs(blob, state.name + ".png");
+      saveAs(blob,"avatar.png");
       resetConfig();
     }
-  }, [state.name, resetConfig]);
+  }, [resetConfig]);
 
   return (
     <div className="App flex flex-col min-h-screen p-20">
@@ -78,12 +69,6 @@ const App = () => {
               shape={state.shape}
             />
           </div>
-          <input
-            className="bg-white bg-opacity-70 w-64 h-10 p-2 mb-10 text-center outline-none z-50 text-black placeholder-gray-900"
-            placeholder="Enter name here"
-            onChange={onInputChange}
-            value={state.name}
-          />
           <AvatarEditor
             config={state.config}
             updateConfig={updateConfig}
