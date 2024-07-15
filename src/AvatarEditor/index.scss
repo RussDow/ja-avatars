@@ -14,43 +14,22 @@
   }
 }
 
-.AvatarEditor {
-  background: rgba(255, 255, 255, 0.1);
-
-  .divider {
-    width: 1.5px;
-    background: #A13368;
-  }
-
-  .iconfont {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    
-    &:after {
-      content: attr(data-tip);
-      position: absolute;
-      bottom: 120%;
-      border-radius: 5px;
-      font-size: 0.75rem;
-      color: #fff;
-      background: #303030;
-      padding: 0.15rem 0.75rem;
-      opacity: 0;
-      transform: translateY(10px);
-      transition: all 0.2s ease-out;
-    }
-  }
-
-  .codeBlock {
-    background: #222;
-    color: #eeebff;
+.iconfont {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  
+  &:after {
+    content: attr(data-tip);
+    position: absolute;
+    bottom: 120%;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    color: #fff;
+    background: #303030;
+    padding: 0.15rem 0.75rem;
     opacity: 0;
     transform: translateY(10px);
     transition: all 0.2s ease-out;
-    &.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
   }
 }

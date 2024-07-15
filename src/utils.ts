@@ -36,6 +36,7 @@ export const pickRandomFromList: PickRandomFromList = (data, { avoidList = [], u
     .filter(Boolean)
     .reduce(
       (acc, cur) => acc.concat(new Array(15).fill(cur)),
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       [] as any[]
     );
   myData = myData.concat(usuallyData);
@@ -49,7 +50,7 @@ export const pickRandomFromList: PickRandomFromList = (data, { avoidList = [], u
 /**
  * Gennerate avatar configurations
  */
-interface DefaultOptions {
+export interface DefaultOptions {
   sex: Sex[],
   faceColor: string[],
   earSize: EarSize[],
