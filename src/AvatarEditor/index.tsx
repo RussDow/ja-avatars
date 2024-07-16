@@ -176,7 +176,7 @@ const AvatarEditor = ({
           switchConfig={() => switchConfig("bgColor", config.bgColor)}
         >
           <div
-            className={"w-7 h-7 bg-white rounded-full"}
+            className={"w-full h-full bg-white rounded-full"}
             style={{ background: config.bgColor }}
           />
         </SectionWrapper>

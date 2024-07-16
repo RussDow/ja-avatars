@@ -75,7 +75,7 @@ export const defaultOptions: DefaultOptions = {
   faceColor: ["#F8D9CE", "#f9c9b6", "#deb3a3", "#c89583", "#AC6651", "#9c6458"],
   earSize: ["small", "big"],
   hairColor: ["#000000", "#ffffff", "#77311D", "#FC909F", "#D2EFF3", "#506AF4", "#F48150"],
-  hairStyleMan: ["normal", "thick", "mohawk", "strands"],
+  hairStyleMan: ["normal", "thick", "mohawk"],
   hairStyleWoman: ["normal", "womanLong", "womanShort"],
   hatColor: ["#000", "#fff", "#77311D", "#FC909F", "#D2EFF3", "#506AF4", "#F48150"],
   hatStyle: ["none"],
