@@ -12,11 +12,10 @@ import Glasses from "./glasses";
 import Nose from "./nose";
 import Mouth from "./mouth";
 import Shirt from "./shirt";
-import React from "react";
 
 
 
-const ReactNiceAvatar: React.FC<NiceAvatarProps> = (props) => {
+const ReactNiceAvatar = (props: NiceAvatarProps) => {
   const { id, className, style, shape = "circle", hairColorRandom = false } = props;
   const config = genConfig(props);
 
