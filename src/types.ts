@@ -6,8 +6,8 @@ type Style = {
 
 export type Sex = 'man' | 'woman'
 export type EarSize = 'small' | 'big'
-export type HairStyle = 'normal' | 'thick' | 'mohawk' | 'womanLong' | 'womanShort' | 'strands'
-export type HairStyleMan = 'normal' | 'thick' | 'mohawk' | 'strands'
+export type HairStyle = 'normal' | 'thick' | 'mohawk' | 'womanLong' | 'womanShort' | 'strands' | 'none'
+export type HairStyleMan = 'normal' | 'thick' | 'mohawk' | 'strands' | 'none'
 export type HairStyleWoman = 'normal' | 'womanLong' | 'womanShort'
 export type HatStyle = 'beanie' |'turban' | 'none'
 export type EyeStyle = 'circle' | 'oval' | 'smile' | 'shadow'

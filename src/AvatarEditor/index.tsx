@@ -83,11 +83,15 @@ const AvatarEditor = ({
           tip="Hair"
           switchConfig={() => switchConfig("hairStyle", config.hairStyle)}
         >
-          <Hair
+          {config.hairStyle == "none" ? (
+            <span className="text-2xl">🚫</span>
+          ) : (
+            <Hair
             style={config.hairStyle!}
             color={config.hairColor!}
             colorRandom={true}
           />
+          )}
         </SectionWrapper>
   
         {/*Hair color*/}

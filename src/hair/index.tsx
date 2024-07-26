@@ -13,6 +13,7 @@ export default function hair(props: { style: string, color: string, colorRandom:
     case "strands": return <ThreeStrands color={color} />;
     case "womanLong": return <WomanLong color={color} />;
     case "womanShort": return <WomanShort color={color} />;
+    case "none": return <></>;
     case "normal":
     default:
       return <Normal color={color} />;
