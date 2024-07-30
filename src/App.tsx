@@ -7,7 +7,7 @@ import AvatarEditor from "./AvatarEditor/index";
 import "./styles.css";
 import { AvatarFullConfig, NiceAvatarProps } from "./types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeftLong, faArrowRightLong, faPrint } from "@fortawesome/free-solid-svg-icons";
+import { faPrint } from "@fortawesome/free-solid-svg-icons";
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState(1);
