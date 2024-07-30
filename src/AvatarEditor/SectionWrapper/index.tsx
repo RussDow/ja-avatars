@@ -4,13 +4,15 @@ export default function sectionWrapper(props: {
   className?: string,
   children: JSX.Element,
   switchConfig: () => void,
-  tip: string
+  tip: string,
+  tabSkip?: boolean
 }): JSX.Element {
-  const { className = "", children, switchConfig, tip } = props
+  const { className = "", children, switchConfig, tip, tabSkip } = props
   return (
     <div className='flex flex-col justify-center items-center text-black font-bold gap-1'>
       <div>{tip}</div>
-      <div
+      <button
+        tabIndex={tabSkip ? -1 : 0}
         className={"SectionWrapper " + className}      
         onClick={switchConfig}>
         <div className="relative w-full h-full">
@@ -18,7 +20,7 @@ export default function sectionWrapper(props: {
             {children}
           </div>
         </div>      
-      </div>
+      </button>
     </div>
   )
 }

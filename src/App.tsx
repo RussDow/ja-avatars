@@ -101,7 +101,7 @@ const PageOne = ({ state, nameError, setNameError, onInputChange, updateConfig, 
         </div>
         <div className="mb-10 flex flex-col items-center">
           <input
-            className={`bg-white/70 w-64 h-10 p-2 mb-1 text-center outline-none z-50 text-black placeholder-gray-900 rounded ${nameError ? "border-2 border-red-700" : ""}`}
+            className={`bg-white/70 w-96 h-10 p-2 mb-1 text-center z-50 text-black placeholder-gray-900 rounded ${nameError ? "border-2 border-red-700" : ""}`}
             placeholder="Enter name here"
             onChange={onInputChange}
             value={state.name}
@@ -112,16 +112,17 @@ const PageOne = ({ state, nameError, setNameError, onInputChange, updateConfig, 
           config={state.config}
           updateConfig={updateConfig}
         />
-        <div className="absolute right-32 -translate-y-1/2 top-1/2 cursor-pointer text-black flex flex-col items-end" onClick={nextPage}>
-          <FontAwesomeIcon icon={faArrowRightLong} size={"2xl"} />
-          <span>Next</span>
-        </div>
+        <button className="mt-10 bg-[#A13368] hover:bg-[#b34479] px-20 py-2 rounded"
+        onClick={nextPage}>Create Badge</button>
       </div>
     </main>
   );
 };
 
 const PageTwo = ({ avatarId, state, download, setPage }: PageTwoProps) => {
+  const previousPage = () => {
+    setPage(1);
+  }
   return (
     <main className="flex-grow h-full w-full flex pt-20">
       <div className="flex-1 flex flex-col items-center">
@@ -139,14 +140,11 @@ const PageTwo = ({ avatarId, state, download, setPage }: PageTwoProps) => {
             <div className="text-black text-2xl text-center mt-2 z-20">Avanade Consultant</div>
           </div>
         </div>
-        <button className="flex gap-4 mt-5 py-2 w-[375px] justify-center items-center text-xl bg-[#DD3C10] rounded" onClick={download}>
+        <button className="flex gap-4 mt-5 py-2 w-[375px] justify-center items-center text-xl bg-[#DD3C10] hover:bg-[#e7572f] rounded" onClick={download}>
           <FontAwesomeIcon icon={faPrint} className="text-3xl" />
           <span>Download & Print</span>
         </button>
-        <div className="absolute left-32 -translate-y-1/2 top-1/2 cursor-pointer text-black flex flex-col items-start" onClick={() => setPage(1)}>
-          <FontAwesomeIcon icon={faArrowLeftLong} size={"2xl"} />
-          <span>Back</span>
-        </div>
+        <button className="mt-6 underline p-2" onClick={previousPage}>Return to previous page</button>
       </div>
     </main>
   )

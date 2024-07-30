@@ -99,11 +99,12 @@ const AvatarEditor = ({
           switchConfig={() => {
             null;
           }}
+          tabSkip={true}
         >
           <>
             <input
               type="color"
-              className="colorPicker bg-transparent border-0 opacity-0 absolute h-12 cursor-pointer z-50"
+              className="bg-transparent border-0 opacity-0 absolute h-16 w-16 rounded-full cursor-pointer z-50"
               value={config.hairColor}
               onChange={(e) => switchHairColor(e)}
             />
