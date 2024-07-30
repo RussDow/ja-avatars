@@ -4,7 +4,7 @@
 
 #root {
   min-height: 100vh;
-  background: linear-gradient(90deg, #ff5800, #890078);
+  background: linear-gradient(135deg, #ff5800, #890078);
   color: #fff;
 }
 
@@ -13,4 +13,20 @@
   width: 100%;
   height: 100%;
   background-color: #00000033;
+}
+
+.badge {
+  position:relative;
+  margin: 0 auto;
+  overflow:hidden;
+}
+
+.badge::after {
+  content: '';
+  position: absolute;
+  border-radius: 8px;
+  top: 16px;
+  width: 64px;
+  height: 20px;
+  box-shadow: 0px 0px 0px 2000px #dddddd;
 }

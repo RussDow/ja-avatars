@@ -20,7 +20,6 @@ interface AvatarEditorProps {
     key: string | number,
     value: string | number | boolean
   ) => void;
-  download: () => Promise<void>;
 }
 
 type HairStyle = HairStyleMan | HairStyleWoman;
@@ -46,8 +45,7 @@ const genDefaultOptions = (opts: DefaultOptions) => {
 
 const AvatarEditor = ({
   config,
-  updateConfig,
-  download,
+  updateConfig
 }: AvatarEditorProps) => {
   const myDefaultOptions = genDefaultOptions(defaultOptions);
 
@@ -183,16 +181,8 @@ const AvatarEditor = ({
             className={"w-full h-full bg-white rounded-full"}
             style={{ background: config.bgColor }}
           />
-        </SectionWrapper>
-  
-        {/* <div className="divider h-14 rounded mx-2" /> */}
-        
+        </SectionWrapper>        
       </div>
-      <i
-      className="iconfont icon-download text-4xl text-black cursor-pointer rounded-[1.8rem] px-6 py-3 flex gap-3 items-center bg-white bg-opacity-70"
-      data-tip="Download"
-      onClick={download}
-    />
     </div>
   );
 };
