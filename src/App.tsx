@@ -51,22 +51,12 @@ const App = () => {
   }, []);
 
   const download = useCallback(async () => {
-    const scale = 2;
     const node = document.getElementById(avatarId);
     if (node) {
-      const blob = await domtoimage.toBlob(node, {
-        height: node.offsetHeight * scale,
-        style: {
-          transform: `scale(${scale}) translate(${
-            node.offsetWidth / 2 / scale
-          }px, ${node.offsetHeight / 2 / scale}px)`,
-          "border-radius": 0,
-        },
-        width: node.offsetWidth * scale,
-      });
+      const blob = await domtoimage.toBlob(node);
 
       saveAs(blob, `${state.name.replace(/\s/g, "").toLowerCase()}-avatar.png`);
-      //resetConfig();
+      resetConfig();
     }
   }, [resetConfig, state.name]);
 
