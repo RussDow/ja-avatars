@@ -4,6 +4,7 @@ import { useState, useCallback, ChangeEvent } from "react";
 import domtoimage from "dom-to-image";
 import { saveAs } from "file-saver";
 import "../styles.css";
+import "./index.css";
 import { genConfig } from "../utils";
 import { NiceAvatarProps } from "../types";
 import PageOne from "./pageone";
