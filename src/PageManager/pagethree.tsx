@@ -3,12 +3,10 @@ import { AvatarFullConfig, NiceAvatarProps } from "../types";
 import { faPrint } from "@fortawesome/free-solid-svg-icons";
 import ReactNiceAvatar from "../index";
 
-
-
-const PageThree = ({ avatarId, state,  setPage }: PageThreeProps) => {
+const PageThree = ({ avatarId, state, setPage }: PageThreeProps) => {
   const print = () => {
     setPage(4);
-  }
+  };
 
   const previousPage = () => {
     setPage(2);
@@ -39,7 +37,7 @@ const PageThree = ({ avatarId, state,  setPage }: PageThreeProps) => {
           onClick={print}
         >
           <FontAwesomeIcon icon={faPrint} className="text-3xl" />
-          <span>Print Preview</span>
+          <span>Print Badges</span>
         </button>
         <button className="mt-6 underline p-2" onClick={previousPage}>
           Return to previous page

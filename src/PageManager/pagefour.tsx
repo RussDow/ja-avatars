@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./index.css";
 import { AvatarFullConfig, NiceAvatarProps } from "../types";
 import ReactNiceAvatar from "../index.tsx";
 
-const PageFour = ({ state }: PageFourProps) => {
+const PageFour = ({ state, setPage, print }: PageFourProps) => {
+  useEffect(() => {
+    print();
+
+    return () => {
+      setPage(1);
+    };
+  }, [setPage, print]);
+
   return (
     <div className="WordSection1">
       <table
