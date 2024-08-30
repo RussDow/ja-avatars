@@ -15,14 +15,20 @@
   background-color: #00000033;
 }
 
+@media print {
+  #waves {
+    display: none !important; /* Use !important to override other styles */
+  }
+}
+
 .badge {
-  position:relative;
-  margin: 0 auto;
-  overflow:hidden;
+  position: relative;
+  margin: 0;
+  overflow: hidden;
 }
 
 .badge::after {
-  content: '';
+  content: "";
   position: absolute;
   border-radius: 8px;
   top: 16px;

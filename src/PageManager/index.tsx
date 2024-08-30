@@ -7,7 +7,8 @@ import "../styles.css";
 import "./index.css";
 import { genConfig } from "../utils";
 import { NiceAvatarProps } from "../types";
-import PageOne from "./pageone";
+// import PageOne from "./pageone";
+import PageFour from "./pagefour";
 
 const PageManager = (): JSX.Element => {
   const [page, setCurrentPage] = useState(1);
@@ -60,10 +61,11 @@ const PageManager = (): JSX.Element => {
     }
   }, [resetConfig, state.name]);
 
-  console.log(page);
   switch (page) {
     case 1:
-      return <PageOne setPage={setCurrentPage} />;
+      return <PageFour
+      state={state}/>
+      //return <PageOne setPage={setCurrentPage} />;
     case 2:
       return (
         <PageTwo
@@ -84,6 +86,8 @@ const PageManager = (): JSX.Element => {
           setPage={setCurrentPage}
         />
       );
+      case 4: return <PageFour
+      state={state}/>
     default:
       return <></>;
   }

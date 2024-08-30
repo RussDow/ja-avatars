@@ -3,6 +3,8 @@ import { AvatarFullConfig, NiceAvatarProps } from "../types";
 import { faPrint } from "@fortawesome/free-solid-svg-icons";
 import ReactNiceAvatar from "../index";
 
+
+
 const PageThree = ({ avatarId, state, download, setPage }: PageThreeProps) => {
   const previousPage = () => {
     setPage(2);
@@ -11,10 +13,10 @@ const PageThree = ({ avatarId, state, download, setPage }: PageThreeProps) => {
     <main className="flex-grow h-full w-full flex pt-20">
       <div className="flex-1 flex flex-col items-center">
         <div id={avatarId}>
-          <div className="badge h-[500px] rounded-lg w-[375px] flex flex-col items-center">
+          <div className="badge w-[224px] rounded-lg h-[327px] flex flex-col items-center">
             <div className="z-10">
               <ReactNiceAvatar
-                className="w-60 h-60 mt-16"
+                className="w-40 h-40 mt-16"
                 {...state.config}
                 hairColorRandom={true}
                 shape={state.shape}
