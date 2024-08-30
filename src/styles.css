@@ -615,6 +615,18 @@ video {
   margin-left: 2.5rem;
 }
 
+.ml-16 {
+  margin-left: 4rem;
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
+.ml-6 {
+  margin-left: 1.5rem;
+}
+
 .mt-10 {
   margin-top: 2.5rem;
 }
@@ -675,6 +687,10 @@ video {
   height: 20rem;
 }
 
+.h-\[224px\] {
+  height: 224px;
+}
+
 .h-\[327px\] {
   height: 327px;
 }
@@ -712,6 +728,10 @@ video {
   width: 224px;
 }
 
+.w-\[327px\] {
+  width: 327px;
+}
+
 .w-\[375px\] {
   width: 375px;
 }
@@ -730,6 +750,16 @@ video {
 
 .flex-grow {
   flex-grow: 1;
+}
+
+.-rotate-90 {
+  --tw-rotate: -90deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.rotate-180 {
+  --tw-rotate: 180deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .transform {
@@ -975,6 +1005,23 @@ video {
     display: none !important;
     /* Use !important to override other styles */
   }
+
+  .App {
+    margin: 0;
+    padding: 0;
+  }
+
+  #root {
+    background: none;
+  }
+
+  .badge-horizontal::after {
+    box-shadow: none;
+  }
+
+  .badge-horizontal {
+    box-shadow: none;
+  }
 }
 
 .badge {
@@ -991,6 +1038,22 @@ video {
   width: 64px;
   height: 20px;
   box-shadow: 0px 0px 0px 2000px #dddddd;
+}
+
+.badge-horizontal {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+}
+
+.badge-horizontal::after {
+  content: "";
+  position: absolute;
+  border-radius: 8px;
+  left: 16px;
+  height: 64px;
+  width: 20px;
+  box-shadow: 0px 0px 0px 2000px #ffffff;
 }
 
 .hover\:bg-\[\#b34479\]:hover {

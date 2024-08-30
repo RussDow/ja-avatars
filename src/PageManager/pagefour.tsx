@@ -3,7 +3,7 @@ import "./index.css";
 import { AvatarFullConfig, NiceAvatarProps } from "../types";
 import ReactNiceAvatar from "../index.tsx";
 
-const PageFour = ({state}: PageFourProps) => {
+const PageFour = ({ state }: PageFourProps) => {
   return (
     <div className="WordSection1">
       <table
@@ -15,11 +15,17 @@ const PageFour = ({state}: PageFourProps) => {
           marginLeft: "-.75pt",
           borderCollapse: "collapse",
           border: "none",
-          tableLayout: "fixed"
+          tableLayout: "fixed",
         }}
       >
         <tbody>
-          <tr style={{ overflow: "hidden", pageBreakInside: "avoid", height: "167.75pt" }}>
+          <tr
+            style={{
+              overflow: "hidden",
+              pageBreakInside: "avoid",
+              height: "167.75pt",
+            }}
+          >
             <td
               width="324"
               valign="top"
@@ -27,25 +33,25 @@ const PageFour = ({state}: PageFourProps) => {
                 width: "243.0pt",
                 padding: "0in .75pt 0in .75pt",
                 height: "167.75pt",
-                overflow: "hidden"
+                overflow: "hidden",
               }}
             >
-                <div className="badge w-[224px] rounded-lg h-[327px] flex flex-col items-center">
-                  <div className="z-10">
-                    <ReactNiceAvatar
-                      className="w-40 h-40 mt-16"
-                      {...state.config}
-                      hairColorRandom={true}
-                      shape={state.shape}
-                    />
-                  </div>
-                  <div className="text-black text-2xl text-center mt-8 z-20">
-                    {state.name}
-                  </div>
-                  <div className="text-black text-2xl text-center mt-2 z-20">
-                    Avanade Avatar
-                  </div>
+              <div className="badge-horizontal h-[224px] rounded-lg w-[327px] flex items-center">
+                <div className="z-10">
+                  <ReactNiceAvatar
+                    className="w-40 h-40 -rotate-90 ml-16"
+                    {...state.config}
+                    hairColorRandom={true}
+                    shape={state.shape}
+                  />
                 </div>
+                <div className="text-black text-2xl text-center ml-6 z-20 write-vertical rotate-180">
+                  {state.name}
+                </div>
+                <div className="text-black text-2xl text-center ml-2 z-20 write-vertical rotate-180">
+                  Avanade Avatar
+                </div>
+              </div>
             </td>
             <td
               width="36"
@@ -54,7 +60,7 @@ const PageFour = ({state}: PageFourProps) => {
                 width: "27.0pt",
                 padding: "0in .75pt 0in .75pt",
                 height: "167.75pt",
-                overflow: "hidden"
+                overflow: "hidden",
               }}
             >
               <p
@@ -77,31 +83,37 @@ const PageFour = ({state}: PageFourProps) => {
                 width: "243.0pt",
                 padding: "0in .75pt 0in .75pt",
                 height: "167.75pt",
-                overflow: "hidden"
+                overflow: "hidden",
               }}
             >
-                <div className="badge w-[224px] rounded-lg h-[327px] flex flex-col items-center">
-                  <div className="z-10">
-                    <ReactNiceAvatar
-                      className="w-40 h-40 mt-16"
-                      {...state.config}
-                      hairColorRandom={true}
-                      shape={state.shape}
-                    />
-                  </div>
-                  <div className="text-black text-2xl text-center mt-8 z-20">
-                    {state.name}
-                  </div>
-                  <div className="text-black text-2xl text-center mt-2 z-20">
-                    Avanade Avatar
-                  </div>
+              <div className="badge-horizontal h-[224px] rounded-lg w-[327px] flex items-center">
+                <div className="z-10">
+                  <ReactNiceAvatar
+                    className="w-40 h-40 -rotate-90 ml-16"
+                    {...state.config}
+                    hairColorRandom={true}
+                    shape={state.shape}
+                  />
                 </div>
+                <div className="text-black text-2xl text-center ml-6 z-20 write-vertical rotate-180">
+                  {state.name}
+                </div>
+                <div className="text-black text-2xl text-center ml-2 z-20 write-vertical rotate-180">
+                  Avanade Avatar
+                </div>
+              </div>
             </td>
           </tr>
           {/* Repeated rows */}
           {[...Array(3)].map((_, index) => (
             <React.Fragment key={index}>
-              <tr style={{ overflow: "hidden", pageBreakInside: "avoid", height: "12.25pt" }}>
+              <tr
+                style={{
+                  overflow: "hidden",
+                  pageBreakInside: "avoid",
+                  height: "12.25pt",
+                }}
+              >
                 <td
                   width="324"
                   valign="top"
@@ -169,7 +181,13 @@ const PageFour = ({state}: PageFourProps) => {
                   </p>
                 </td>
               </tr>
-              <tr style={{ overflow: "hidden", pageBreakInside: "avoid", height: "167.75pt" }}>
+              <tr
+                style={{
+                  overflow: "hidden",
+                  pageBreakInside: "avoid",
+                  height: "167.75pt",
+                }}
+              >
                 <td
                   width="324"
                   valign="top"
@@ -177,25 +195,25 @@ const PageFour = ({state}: PageFourProps) => {
                     width: "243.0pt",
                     padding: "0in .75pt 0in .75pt",
                     height: "167.75pt",
-                    overflow: "hidden"
-                  }}> 
-                  
-                    <div className="badge w-[224px] rounded-lg h-[327px] flex flex-col items-center">
-                      <div className="z-10">
-                        <ReactNiceAvatar
-                          className="w-40 h-40 mt-16"
-                          {...state.config}
-                          hairColorRandom={true}
-                          shape={state.shape}
-                        />
-                      </div>
-                      <div className="text-black text-2xl text-center mt-8 z-20">
-                        {state.name}
-                      </div>
-                      <div className="text-black text-2xl text-center mt-2 z-20">
-                        Avanade Avatar
-                      </div>
+                    overflow: "hidden",
+                  }}
+                >
+                  <div className="badge-horizontal h-[224px] rounded-lg w-[327px] flex items-center">
+                    <div className="z-10">
+                      <ReactNiceAvatar
+                        className="w-40 h-40 -rotate-90 ml-16"
+                        {...state.config}
+                        hairColorRandom={true}
+                        shape={state.shape}
+                      />
                     </div>
+                    <div className="text-black text-2xl text-center ml-6 z-20 write-vertical rotate-180">
+                      {state.name}
+                    </div>
+                    <div className="text-black text-2xl text-center ml-2 z-20 write-vertical rotate-180">
+                      Avanade Avatar
+                    </div>
+                  </div>
                 </td>
                 <td
                   width="36"
@@ -226,25 +244,25 @@ const PageFour = ({state}: PageFourProps) => {
                     width: "243.0pt",
                     padding: "0in .75pt 0in .75pt",
                     height: "167.75pt",
-                    overflow: "hidden"
-                  }}> 
-                  
-                    <div className="badge w-[224px] rounded-lg h-[327px] flex flex-col items-center">
-                      <div className="z-10">
-                        <ReactNiceAvatar
-                          className="w-40 h-40 mt-16"
-                          {...state.config}
-                          hairColorRandom={true}
-                          shape={state.shape}
-                        />
-                      </div>
-                      <div className="text-black text-2xl text-center mt-8 z-20">
-                        {state.name}
-                      </div>
-                      <div className="text-black text-2xl text-center mt-2 z-20">
-                        Avanade Avatar
-                      </div>
+                    overflow: "hidden",
+                  }}
+                >
+                  <div className="badge-horizontal h-[224px] rounded-lg w-[327px] flex items-center">
+                    <div className="z-10">
+                      <ReactNiceAvatar
+                        className="w-40 h-40 -rotate-90 ml-16"
+                        {...state.config}
+                        hairColorRandom={true}
+                        shape={state.shape}
+                      />
                     </div>
+                    <div className="text-black text-2xl text-center ml-6 z-20 write-vertical rotate-180">
+                      {state.name}
+                    </div>
+                    <div className="text-black text-2xl text-center ml-2 z-20 write-vertical rotate-180">
+                      Avanade Avatar
+                    </div>
+                  </div>
                 </td>
               </tr>
             </React.Fragment>
@@ -274,5 +292,6 @@ interface PageFourProps {
     shape: NiceAvatarProps["shape"];
     name: string;
   };
-  // setPage: React.Dispatch<React.SetStateAction<number>>;
+  setPage: React.Dispatch<React.SetStateAction<number>>;
+  print: () => void;
 }

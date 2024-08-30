@@ -5,7 +5,11 @@ import ReactNiceAvatar from "../index";
 
 
 
-const PageThree = ({ avatarId, state, download, setPage }: PageThreeProps) => {
+const PageThree = ({ avatarId, state,  setPage }: PageThreeProps) => {
+  const print = () => {
+    setPage(4);
+  }
+
   const previousPage = () => {
     setPage(2);
   };
@@ -32,10 +36,10 @@ const PageThree = ({ avatarId, state, download, setPage }: PageThreeProps) => {
         </div>
         <button
           className="flex gap-4 mt-5 py-2 w-[375px] justify-center items-center text-xl bg-[#DD3C10] hover:bg-[#e7572f] rounded"
-          onClick={download}
+          onClick={print}
         >
           <FontAwesomeIcon icon={faPrint} className="text-3xl" />
-          <span>Download & Print</span>
+          <span>Print Preview</span>
         </button>
         <button className="mt-6 underline p-2" onClick={previousPage}>
           Return to previous page
@@ -54,6 +58,5 @@ interface PageThreeProps {
     shape: NiceAvatarProps["shape"];
     name: string;
   };
-  download: () => Promise<void>;
   setPage: React.Dispatch<React.SetStateAction<number>>;
 }

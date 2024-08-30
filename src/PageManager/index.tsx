@@ -1,13 +1,11 @@
 import PageTwo from "./pagetwo";
 import PageThree from "./pagethree";
 import { useState, useCallback, ChangeEvent } from "react";
-import domtoimage from "dom-to-image";
-import { saveAs } from "file-saver";
 import "../styles.css";
 import "./index.css";
 import { genConfig } from "../utils";
 import { NiceAvatarProps } from "../types";
-// import PageOne from "./pageone";
+import PageOne from "./pageone";
 import PageFour from "./pagefour";
 
 const PageManager = (): JSX.Element => {
@@ -51,21 +49,25 @@ const PageManager = (): JSX.Element => {
     setCurrentPage(1);
   }, []);
 
-  const download = useCallback(async () => {
-    const node = document.getElementById(avatarId);
-    if (node) {
-      const blob = await domtoimage.toBlob(node);
+  const print = () => {
+    window.print();
 
-      saveAs(blob, `${state.name.replace(/\s/g, "").toLowerCase()}-avatar.png`);
-      resetConfig();
-    }
-  }, [resetConfig, state.name]);
+    resetConfig();
+  };
+
+  // const download = useCallback(async () => {
+  //   const node = document.getElementById(avatarId);
+  //   if (node) {
+  //     const blob = await domtoimage.toBlob(node);
+
+  //     saveAs(blob, `${state.name.replace(/\s/g, "").toLowerCase()}-avatar.png`);
+  //     resetConfig();
+  //   }
+  // }, [resetConfig, state.name]);
 
   switch (page) {
     case 1:
-      return <PageFour
-      state={state}/>
-      //return <PageOne setPage={setCurrentPage} />;
+      return <PageOne setPage={setCurrentPage} />;
     case 2:
       return (
         <PageTwo
@@ -79,15 +81,10 @@ const PageManager = (): JSX.Element => {
       );
     case 3:
       return (
-        <PageThree
-          avatarId={avatarId}
-          state={state}
-          download={download}
-          setPage={setCurrentPage}
-        />
+        <PageThree avatarId={avatarId} state={state} setPage={setCurrentPage} />
       );
-      case 4: return <PageFour
-      state={state}/>
+    case 4:
+      return <PageFour state={state} setPage={setCurrentPage} print={print} />;
     default:
       return <></>;
   }
