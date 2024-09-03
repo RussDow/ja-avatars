@@ -1,6 +1,9 @@
 # Junior Avatars
 A simple avatar creator based on [react-nice-avatar](https://github.com/dapi-labs/react-nice-avatar)
 
+## Kiosk Mode Usage
+This application is meant to be used in Kiosk mode. Refer to to the [readme.txt](scripts/readme.txt) for more information about how to set up the project to run in Kiosk mode.
+
 ## Assets
 - Designer: [@Micah](https://www.figma.com/@Micah) on Figma
 - Figma files: [Avatar Illustration System](https://www.figma.com/community/file/829741575478342595)
