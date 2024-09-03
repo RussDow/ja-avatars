@@ -1,3 +1,5 @@
+Set-Location -Path "C:\ja-avatars-main"
+
 # Start the React development server with npm run dev
 Start-Process "npm" -ArgumentList "run dev" -NoNewWindow
 
@@ -5,4 +7,4 @@ Start-Process "npm" -ArgumentList "run dev" -NoNewWindow
 Start-Sleep -Seconds 5
 
 # Open the default web browser to the server's address
-Start-Process "http://localhost:5173/ja-avatars/"
+start-process -filepath msedge -Argumentlist '--kiosk "http://localhost:5173/ja-avatars/" --edge-kiosk-type=fullscreen'
